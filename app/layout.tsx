@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vikash Sinha | B2B Marketing Leader",
-  description: "Vikash Sinha is a B2B marketing leader building brands, demand systems and revenue outcomes.",
+  title: "Vikash Sinha | B2B Marketing & GTM",
+  description: "B2B marketing leadership, growth audits and ads-to-revenue advisory by Vikash Sinha.",
   other: {
     "codex-preview": "development",
   },

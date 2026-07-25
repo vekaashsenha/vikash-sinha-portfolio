@@ -1,0 +1,18 @@
+import Link from "next/link";
+
+const offers = [
+  ["01", "Fractional B2B marketing leadership", "For founder-led or growing B2B companies that need experienced marketing leadership before they are ready for a full-time head of marketing.", ["Positioning and go-to-market priorities", "Demand-generation and pipeline plan", "Sales, CRM and marketing alignment", "Leadership for agencies and internal teams"]],
+  ["02", "Growth and demand-generation audit", "A focused diagnosis of where your marketing system is leaking attention, leads or revenue, followed by a practical action plan.", ["ICP, buyer journey and message review", "Funnel, campaign and landing-page diagnosis", "Lead-quality and sales-handoff review", "Prioritised 30-day action plan"]],
+  ["03", "Ads-to-revenue advisory", "For B2B teams spending on Google, LinkedIn or Meta but unable to see which activity produces qualified pipeline and revenue.", ["Spend-to-pipeline visibility", "Campaign and lead-quality diagnosis", "Conversion tracking and CRM feedback loop", "Weekly decision support for the marketing lead"]],
+];
+
+export default function ServicesPage() {
+  return <main className="services-site">
+    <header className="studio-nav"><Link href="/" className="studio-wordmark" aria-label="Vikash Sinha home">VIKASH<br />SINHA</Link><p>SERVICES / BUILT FOR COMMERCIAL MOVEMENT</p><nav><Link href="/about-me">About me</Link><Link href="/about">Résumé</Link><Link href="/services" aria-current="page">Services</Link><Link href="/products">Products</Link><Link href="/blog">Blog</Link><Link className="nav-button" href="/contact">Contact ↗</Link></nav></header>
+    <section className="services-hero"><div><p className="kicker">INDEPENDENT B2B MARKETING SUPPORT</p><h1>Make marketing<br /><em>earn</em> its seat<br />at the table.</h1><p>For B2B companies that need sharper positioning, stronger demand and a clearer link between marketing activity and commercial results.</p><a href="mailto:Vekaashsenha@gmail.com?subject=Services%20enquiry%20for%20Vikash%20Sinha">Discuss your growth problem ↗</a></div><aside><span>01</span><b>Brand<br />Demand<br /><em>Revenue</em></b><p>One commercial system.</p></aside></section>
+    <section className="services-offers"><div className="services-intro"><p className="kicker">HOW I CAN HELP</p><div><h2>Three clear ways to start.</h2><p>I work on the commercial problem first. I do not sell vanity dashboards, generic social-media packages or blind lead volume.</p></div></div><div className="services-grid">{offers.map(([number, title, detail, includes]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{detail}</p><ul>{(includes as string[]).map((item) => <li key={item}>{item}</li>)}</ul><a href={`mailto:Vekaashsenha@gmail.com?subject=${encodeURIComponent(title as string)}`}>Start a conversation ↗</a></article>)}</div></section>
+    <section className="services-fit"><article><p className="kicker">A GOOD FIT</p><h2>You have a real B2B offer, some evidence of demand, and need a stronger commercial marketing system.</h2></article><article><p className="kicker">NOT A FIT</p><h2>You need cheap leads at any cost, a generic agency package, or someone to make promises before seeing the data.</h2></article></section>
+    <section className="services-end"><p className="kicker">START WITH THE FACTS</p><h2>Tell me where growth is getting stuck.</h2><p>I will tell you plainly whether I can help and what the right first piece of work is.</p><a href="mailto:Vekaashsenha@gmail.com?subject=B2B%20growth%20conversation">Vekaashsenha@gmail.com ↗</a></section>
+    <footer className="studio-footer"><strong>VIKASH SINHA</strong><span>Marketing, made commercial.</span><Link href="/">Back home ↗</Link></footer>
+  </main>;
+}
