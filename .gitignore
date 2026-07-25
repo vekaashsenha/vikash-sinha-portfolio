@@ -2,6 +2,7 @@ node_modules/
 .next/
 dist/
 .wrangler/
+.sites-runtime/
 .env*
 !.env.example
 *.log
